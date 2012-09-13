@@ -2,7 +2,7 @@
   "author": "Alex Robson <alex@sharplearningcurve.com> (http://sharplearningcurve.com)",
   "name": "anvil.token",
   "description": "An anvil core plugin that provides token replacement in source files",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "repository": {
     "type": "git",
     "url": "git://github.com/arobson/anvil.token.git"
@@ -12,7 +12,7 @@
   },
   "main": "./lib/token.js",
   "dependencies": {
-    "js-yaml": "1.0.1"
+    "yaml-js": "~0.0.5"
   },
   "devDependencies": { 
     "anvil.js": ">=0.8.5",

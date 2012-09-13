@@ -1,4 +1,4 @@
-var yaml = require( "js-yaml" );
+var yaml = require( "yaml-js" );
 
 module.exports = function( _, anvil ) {
 	return anvil.plugin( {
