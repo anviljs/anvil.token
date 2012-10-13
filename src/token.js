@@ -35,7 +35,7 @@ module.exports = function( _, anvil ) {
 			var self = this;
 			anvil.fs.read( "./package.json", function( content, error ) {
 				if( !error ) {
-					self.config.packageData = JSON.parse( content );
+					self.config.packageData = JSON.safeParse( content );
 				}
 				done();
 			} );
@@ -45,7 +45,7 @@ module.exports = function( _, anvil ) {
 			var self = this;
 			var parse = path.indexOf( "yaml" ) > 0 ?
 				function( data ) { return yaml.load( data ); } :
-				function( data ) { return JSON.parse( data ); };
+				function( data ) { return JSON.safeParse( data ); };
 
 			anvil.fs.read( path, function( content, error ) {
 				if( !error ) {
