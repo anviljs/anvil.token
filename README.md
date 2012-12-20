@@ -1,6 +1,6 @@
-## Anvil Token Plugin
+## Anvil Token Extension
 
-This plugin is a core component of anvil and is required to function as expected.
+A core component of anvil and is required to function as expected.
 
 ## Installation
 

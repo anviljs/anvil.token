@@ -1,4 +1,4 @@
-var yaml = require( "yaml-js" );
+var yaml;
 
 module.exports = function( _, anvil ) {
 	return anvil.plugin( {
@@ -42,6 +42,9 @@ module.exports = function( _, anvil ) {
 		},
 
 		loadValues: function( path, done ) {
+			if( !yaml ) {
+				yaml = require( "yaml-js" );
+			}
 			var self = this;
 			var parse = path.indexOf( "yaml" ) > 0 ?
 				function( data ) { return yaml.load( data ); } :
