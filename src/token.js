@@ -34,7 +34,7 @@ module.exports = function( _, anvil ) {
 		loadPackage: function( done ) {
 			var self = this;
 			anvil.fs.read( "./package.json", function( content, error ) {
-				if( !error ) {
+				if( content.trim().length != 0 && !error ) {
 					self.config.packageData = JSON.safeParse( content );
 				}
 				done();
